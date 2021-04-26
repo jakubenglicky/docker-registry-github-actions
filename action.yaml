@@ -1,0 +1,22 @@
+name: 'Delete tag from Docker Registry'
+description: 'Delete tag from Docker Registry by digest via API'
+branding:
+  icon: 'anchor'
+  color: 'orange'
+inputs:
+  registryUrl:
+    description: 'Your registry URL'
+    required: true
+  owner:
+    description: 'Your Github account or organization'
+    required: true
+  repo:
+    description: 'The repository name'
+    required: true
+  tag:
+    description: 'Image tag for delete'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'main.js'
